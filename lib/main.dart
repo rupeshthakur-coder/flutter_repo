@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rapo/chart_ai.dart';
+import 'package:flutter_rapo/second_page.dart/detailed_analysis.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ChatAi(),
+      home: const DetailedAnalysis(),
     );
   }
 }

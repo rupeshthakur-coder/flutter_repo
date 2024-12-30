@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CustomSnackbar extends StatelessWidget {
-  const CustomSnackbar({super.key});
+  final String title;
+  final String text;
+
+  const CustomSnackbar({
+    super.key,
+    required this.title,
+    required this.text,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -10,26 +17,38 @@ class CustomSnackbar extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text(
-            "Select Photo",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          Text(
+            title,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
           Text(
-            "Choose a photo from your library or take a new one.",
+            text,
             style: TextStyle(color: Colors.grey[600]),
           ),
           const SizedBox(height: 16),
           ListTile(
-            leading: const Icon(Icons.photo_library),
-            title: const Text("Choose from Library"),
+            leading: const Icon(
+              Icons.photo_library,
+              color: Colors.blue,
+            ),
+            title: const Text(
+              "Choose from Library",
+              style: TextStyle(color: Colors.blue),
+            ),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            leading: const Icon(Icons.camera_alt),
-            title: const Text("Take Photo"),
+            leading: const Icon(
+              Icons.camera_alt,
+              color: Colors.blue,
+            ),
+            title: const Text(
+              "Take Photo",
+              style: TextStyle(color: Colors.blue),
+            ),
             onTap: () {
               Navigator.pop(context);
             },
@@ -39,7 +58,7 @@ class CustomSnackbar extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            child: const Text("Cancel", style: TextStyle(color: Colors.red)),
+            child: const Text("Cancel", style: TextStyle(color: Colors.blue)),
           ),
         ],
       ),

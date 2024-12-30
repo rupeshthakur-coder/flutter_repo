@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rapo/snack_bar.dart';
+import 'package:flutter_rapo/first_pages/snack_bar.dart';
 
 class ButtonCard extends StatelessWidget {
   final String title;
+  final String text;
   final IconData? icon;
-  const ButtonCard({super.key, required this.title, required this.icon});
+  final Color color;
+  final double width;
+
+  const ButtonCard({
+    super.key,
+    required this.title,
+    required this.text,
+    required this.icon,
+    required this.color,
+    required this.width,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +29,18 @@ class ButtonCard extends StatelessWidget {
             ),
           ),
           builder: (BuildContext context) {
-            return const CustomSnackbar();
+            return const CustomSnackbar(
+              title: "Select Photo",
+              text: "Choose photo from your libary or take a new one",
+            );
           },
         );
       },
       child: Container(
-        width: double.infinity,
+        width: width,
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: Colors.green,
+          color: color,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Row(

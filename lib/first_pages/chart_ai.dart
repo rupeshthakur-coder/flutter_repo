@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rapo/button_card.dart';
+import 'package:flutter_rapo/first_pages/button_card.dart';
 
 class ChatAi extends StatelessWidget {
   const ChatAi({super.key});
@@ -16,13 +16,9 @@ class ChatAi extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Icon(
-                    Icons.folder,
-                  )
+                  Icon(Icons.folder),
                 ],
               ),
-              Spacer(),
-              Spacer(),
               Spacer(),
               Text(
                 'Chart AI',
@@ -31,18 +27,23 @@ class ChatAi extends StatelessWidget {
                   fontSize: 50,
                 ),
               ),
-              Text('Technical analysis for any tranding chart in seconds'),
+              Text(
+                'Technical analysis for any trading chart in seconds',
+              ),
+              Spacer(),
               Spacer(),
               Spacer(),
               ButtonCard(
                 title: 'Analyse Chart',
+                text: 'Perform detailed analysis of charts and graphs.',
                 icon: null,
+                color: Colors.green,
+                width: double.infinity,
               ),
-              SizedBox(
-                height: 20,
+              Spacer(),
+              Text(
+                'This is random text that needs to be displayed below about disclaimer of the app',
               ),
-              Text(' this is random text need to be displayed below about disclamer of app  '),
-              Spacer()
             ],
           ),
         ),
