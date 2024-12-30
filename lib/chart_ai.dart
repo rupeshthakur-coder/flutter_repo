@@ -9,34 +9,42 @@ class ChatAi extends StatelessWidget {
     return const Scaffold(
       body: Padding(
         padding: EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Icon(
-                  Icons.folder,
-                )
-              ],
-            ),
-            Spacer(),
-            Text(
-              'Chart AI',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 50,
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Icon(
+                    Icons.folder,
+                  )
+                ],
               ),
-            ),
-            Text('Technical analysis for any tranding chart in seconds'),
-            Spacer(),
-            ButtonCard(
-              title: 'Analyse Chart',
-              icon: null,
-            ),
-            Spacer(),
-            Text(' this is random text need to be displayed below about disclamer of app  ')
-          ],
+              Spacer(),
+              Spacer(),
+              Spacer(),
+              Text(
+                'Chart AI',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 50,
+                ),
+              ),
+              Text('Technical analysis for any tranding chart in seconds'),
+              Spacer(),
+              Spacer(),
+              ButtonCard(
+                title: 'Analyse Chart',
+                icon: null,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(' this is random text need to be displayed below about disclamer of app  '),
+              Spacer()
+            ],
+          ),
         ),
       ),
     );
