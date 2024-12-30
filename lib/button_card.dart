@@ -7,20 +7,22 @@ class ButtonCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: Colors.green,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, color: Colors.white),
-          const SizedBox(width: 10),
-          Text(title, style: const TextStyle(fontSize: 12, color: Colors.white)),
-        ],
+    return GestureDetector(
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: Colors.green,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(icon, color: Colors.white),
+            const SizedBox(width: 10),
+            Text(title, style: const TextStyle(fontSize: 12, color: Colors.white)),
+          ],
+        ),
       ),
     );
   }
